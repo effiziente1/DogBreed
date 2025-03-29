@@ -24,9 +24,7 @@ struct ListView: View {
                             ToolbarItem(placement: .principal) {
                                 Text("Dog Breeds")
                                     .font(.title.bold())
-                                    .accessibilityIdentifier(AccessibilityID.DogBreeds.navigationTitle)
                             }
-                            
                         }
                         .navigationBarTitleDisplayMode(.inline)            
                         .accessibilityIdentifier(AccessibilityID.DogBreeds.navigationTitle)

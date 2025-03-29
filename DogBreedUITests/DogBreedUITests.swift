@@ -21,8 +21,8 @@ final class DogBreedUITests: XCTestCase {
     func testExample() throws {  
         let app = XCUIApplication()
         app.launch()
-        app/*@START_MENU_TOKEN@*/.collectionViews["dog_breeds_title"].buttons["breed_row_boykin_spaniel"]/*[[".otherElements[\"dog_breeds_nav_view\"].collectionViews[\"dog_breeds_title\"]",".cells",".buttons[\"Boykin Spaniel, A medium-sized flushing and retrieving dog known for its rich brown coat, the Boykin Spaniel is avid, eager, merry, and trainable. This mellow housedog and tenacious bird dog was once South Carolina’s best-kept secret.\"]",".buttons[\"breed_row_boykin_spaniel\"]",".collectionViews[\"dog_breeds_title\"]"],[[[-1,4,1],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0,0]]@END_MENU_TOKEN@*/.tap()
-        app/*@START_MENU_TOKEN@*/.navigationBars["Boykin Spaniel"]/*[[".otherElements[\"dog_breeds_nav_view\"].navigationBars[\"Boykin Spaniel\"]",".navigationBars[\"Boykin Spaniel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Back"].tap() 
+        app.collectionViews["dog_breeds_title"].buttons["breed_row_boykin_spaniel"].tap()
+        app.navigationBars["Boykin Spaniel"].buttons["Back"].tap() 
     }
 
 
