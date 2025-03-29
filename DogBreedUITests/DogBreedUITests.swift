@@ -18,18 +18,13 @@ final class DogBreedUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testExample() throws {  
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app/*@START_MENU_TOKEN@*/.collectionViews["dog_breeds_title"].buttons["breed_row_boykin_spaniel"]/*[[".otherElements[\"dog_breeds_nav_view\"].collectionViews[\"dog_breeds_title\"]",".cells",".buttons[\"Boykin Spaniel, A medium-sized flushing and retrieving dog known for its rich brown coat, the Boykin Spaniel is avid, eager, merry, and trainable. This mellow housedog and tenacious bird dog was once South Carolina’s best-kept secret.\"]",".buttons[\"breed_row_boykin_spaniel\"]",".collectionViews[\"dog_breeds_title\"]"],[[[-1,4,1],[-1,0,1]],[[-1,3],[-1,2],[-1,1,2]],[[-1,3],[-1,2]]],[0,0]]@END_MENU_TOKEN@*/.tap()
+        app/*@START_MENU_TOKEN@*/.navigationBars["Boykin Spaniel"]/*[[".otherElements[\"dog_breeds_nav_view\"].navigationBars[\"Boykin Spaniel\"]",".navigationBars[\"Boykin Spaniel\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.buttons["Back"].tap() 
     }
+
 
     @MainActor
     func testLaunchPerformance() throws {

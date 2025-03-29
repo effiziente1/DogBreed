@@ -10,24 +10,31 @@ import SwiftUI
 struct ListView: View {
     var body: some View {
         NavigationView {
-            List(breeds) {
-                breed in
+            List(breeds) { breed in
                 NavigationLink(destination: DetailView(dogBreedData: breed)) {
-                        RowView(breedData: breed)
+                    RowView(breedData: breed)
                 }
+                .accessibilityIdentifier(AccessibilityID.DogBreeds.breedRow(breed.breed))
                 .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                 .listRowSeparator(.visible)
-                               
             }
+            .accessibilityIdentifier(AccessibilityID.DogBreeds.listView)
             .listStyle(PlainListStyle())
-            .navigationBarTitle(Text("Dog Breeds"), displayMode: .large)
+            .toolbar {
+                            ToolbarItem(placement: .principal) {
+                                Text("Dog Breeds")
+                                    .font(.title.bold())
+                                    .accessibilityIdentifier(AccessibilityID.DogBreeds.navigationTitle)
+                            }
+                            
+                        }
+                        .navigationBarTitleDisplayMode(.inline)            
+                        .accessibilityIdentifier(AccessibilityID.DogBreeds.navigationTitle)
             .padding(0)
-            
         }
+        .accessibilityIdentifier(AccessibilityID.DogBreeds.navigationView)
     }
-    
 }
-
 #Preview {
     ListView()
 }
