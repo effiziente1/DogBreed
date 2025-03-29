@@ -18,17 +18,17 @@ struct RowView: View {
                 .clipShape(RoundedCorner(radius: 10, corners: [.topLeft, .topRight, .bottomLeft, .bottomRight]))
                 .padding(2)
             
-            VStack (alignment: .leading) {
+            VStack (alignment: .leading, spacing: 4) {
                 Text(breedData.breed)
                     .font(.system(size: 22))
                     .foregroundColor(Color.blue)
                     .fontWeight(.bold)
                 
                 Text(breedData.description)
-                    .lineLimit(2)
+                    .lineLimit(3)
                     .foregroundColor(Color.blue)
                     .lineSpacing(2)
-                    .frame(height: 50)
+                    .frame(height: 70)
                     .font(.system(size: 18))
             }.frame(height: 80)
         }
