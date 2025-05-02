@@ -14,7 +14,7 @@ struct ListView: View {
                 NavigationLink(destination: DetailView(dogBreedData: breed)) {
                     RowView(breedData: breed)
                 }
-                .accessibilityIdentifier(AccessibilityID.DogBreeds.breedRow(breed.breed))
+                .accessibilityIdentifier(breed.breed)
                 .listRowInsets(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                 .listRowSeparator(.visible)
             }

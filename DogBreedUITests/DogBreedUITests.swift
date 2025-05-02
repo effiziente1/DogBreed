@@ -18,21 +18,20 @@ final class DogBreedUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    func testExample() throws {  
-        let app = XCUIApplication()
-        app.launch()
-        app.collectionViews["dog_breeds_title"].buttons["breed_row_boykin_spaniel"].tap()
-        app.navigationBars["Boykin Spaniel"].buttons["Back"].tap() 
-    }
-
-
-    @MainActor
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
+    func testNavigateToBreedInfo() throws {  
+        XCTContext.runActivity(named: "Navigate to Boykin Spaniel breed info and verify title") { _ in
+            let app = XCUIApplication()
+            app.launch()
+            let breed = "Boykin Spaniel"
+            XCTContext.runActivity(named: "Tap in the dog breed '\(breed)'") { _ in
+                app.collectionViews["dog_breeds_title"].buttons[breed].tap()
             }
+            let assert = "Title is '\(breed)'"
+            XCTContext.runActivity(named: assert) { _ in
+                XCTAssertEqual(app.staticTexts["title"].label, breed, assert)
+            }
+            app.navigationBars["Boykin Spaniel"].buttons["Back"].tap()
         }
     }
+
 }

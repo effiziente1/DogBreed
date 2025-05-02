@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "E6E0ED0A-61A2-4918-A421-C27F6F017CA7",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "DogBreedUITests\/testExample()",
+        "DogBreedUITests\/testLaunchPerformance()"
+      ],
+      "target" : {
+        "containerPath" : "container:DogBreed.xcodeproj",
+        "identifier" : "48D05B7D2CFBC1A8003D0F0E",
+        "name" : "DogBreedUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

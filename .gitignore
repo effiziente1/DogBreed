@@ -61,3 +61,11 @@ playground.xcworkspace
 Build/
 Index/
 .qodo
+
+allure-report/
+allure-results/
+TestResult/
+TestResult.xcresult/
+xcresults
+.gitignore
+TestResult

@@ -57,7 +57,7 @@ struct Card: View {
                         .padding(.top, 20)
                         .padding(.bottom, 10)
                         .accessibilityAddTraits(.isHeader)
-                    
+                        .accessibilityIdentifier("title")
                     Divider()
                         .background(Color.blue)
                         .padding(.horizontal, 20)
